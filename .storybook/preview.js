@@ -1,5 +1,8 @@
 import { defineCustomElements } from '../dist/esm/loader';
 
+// medgrupo
+import '../styles/medgrupo.css';
+
 // themes
 import '../styles/themes/default.css';
 

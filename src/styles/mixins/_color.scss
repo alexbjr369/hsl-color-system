@@ -22,9 +22,7 @@
       $mutable: $color-mutable-3;
     }
 
-    --#{$namespace}-color-#{$name}-#{$index}: calc(var(--#{$namespace}-color-hue, #{$hue}) + var(--#{$namespace}-color-hue-factor, 0)),
-      calc(var(--#{$namespace}-color-saturation, #{$color-saturation}) + var(--#{$namespace}-color-saturation-factor, 0%)),
-      calc(var(--#{$namespace}-color-luminosity-#{$index}, #{map-get($color-luminosity, $index)}) + var(--#{$namespace}-color-luminosity-mutable-#{$mutable-number}, #{$mutable}));
+    --#{$namespace}-color-#{$name}-#{$index}: calc(var(--#{$namespace}-color-hue, #{$hue}) + var(--#{$namespace}-color-hue-factor, 0)), calc(var(--#{$namespace}-color-saturation, #{$color-saturation}) + var(--#{$namespace}-color-saturation-factor, 0%)), calc(var(--#{$namespace}-color-luminosity-#{$index}, #{map-get($color-luminosity, $index)}) + var(--#{$namespace}-color-luminosity-mutable-#{$mutable-number}, #{$mutable}));
   }
 }
 
@@ -45,9 +43,7 @@
       $mutable: $color-neutral-mutable-2;
     }
 
-    --#{$namespace}-color-neutral-#{$index}: calc(var(--#{$namespace}-color-neutral-hue, #{$color-neutral-hue}) + var(--#{$namespace}-color-neutral-hue-factor, 0)),
-      calc(var(--#{$namespace}-color-neutral-saturation, #{$color-neutral-saturation}) + var(--#{$namespace}-color-neutral-saturation-factor, 0%)),
-      calc(var(--#{$namespace}-color-neutral-luminosity, #{$color-neutral-luminosity}) + var(--#{$namespace}-color-neutral-luminosity-mutable-#{$mutable-number}, #{$mutable}) + #{($index - 1) * $luminosity-factor * 1%});
+    --#{$namespace}-color-neutral-#{$index}: calc(var(--#{$namespace}-color-neutral-hue, #{$color-neutral-hue}) + var(--#{$namespace}-color-neutral-hue-factor, 0)), calc(var(--#{$namespace}-color-neutral-saturation, #{$color-neutral-saturation}) + var(--#{$namespace}-color-neutral-saturation-factor, 0%)), calc(var(--#{$namespace}-color-neutral-luminosity, #{$color-neutral-luminosity}) + var(--#{$namespace}-color-neutral-luminosity-mutable-#{$mutable-number}, #{$mutable}) + #{($index - 1) * $luminosity-factor * 1%} * #{$color-neutral-invert});
   }
 }
 

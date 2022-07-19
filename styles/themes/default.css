@@ -1,64 +1,24 @@
 :root {
-  --med-color-primary-1: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-1, 20%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-primary-2: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-2, 30%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-primary-3: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-3, 50%) + var(--med-color-luminosity-mutable-3, var(--med-color-neutral-luminosity-factor-2, 0%)));
-  --med-color-primary-4: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-4, 70%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-primary-5: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-5, 80%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-secondary-1: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-1, 20%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-secondary-2: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-2, 30%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-secondary-3: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-3, 50%) + var(--med-color-luminosity-mutable-3, var(--med-color-neutral-luminosity-factor-2, 0%)));
-  --med-color-secondary-4: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-4, 70%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-secondary-5: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)),
-    calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)),
-    calc(var(--med-color-luminosity-5, 80%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
-  --med-color-neutral-1: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 0%);
-  --med-color-neutral-2: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 10%);
-  --med-color-neutral-3: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 20%);
-  --med-color-neutral-4: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 30%);
-  --med-color-neutral-5: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 40%);
-  --med-color-neutral-6: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 50%);
-  --med-color-neutral-7: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 60%);
-  --med-color-neutral-8: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 70%);
-  --med-color-neutral-9: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 80%);
-  --med-color-neutral-10: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)),
-    calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)),
-    calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 90%);
+  --med-color-primary-1: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-1, 20%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-primary-2: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-2, 30%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-primary-3: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-3, 50%) + var(--med-color-luminosity-mutable-3, var(--med-color-neutral-luminosity-factor-2, 0%)));
+  --med-color-primary-4: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-4, 70%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-primary-5: calc(var(--med-color-hue, 25) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-5, 80%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-secondary-1: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-1, 20%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-secondary-2: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-2, 30%) + var(--med-color-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-secondary-3: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-3, 50%) + var(--med-color-luminosity-mutable-3, var(--med-color-neutral-luminosity-factor-2, 0%)));
+  --med-color-secondary-4: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-4, 70%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-secondary-5: calc(var(--med-color-hue, 80) + var(--med-color-hue-factor, 0)), calc(var(--med-color-saturation, 80%) + var(--med-color-saturation-factor, 0%)), calc(var(--med-color-luminosity-5, 80%) + var(--med-color-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-1, 0%)));
+  --med-color-neutral-1: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 0% * var(--neutral-invert, 1));
+  --med-color-neutral-2: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 10% * var(--neutral-invert, 1));
+  --med-color-neutral-3: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 20% * var(--neutral-invert, 1));
+  --med-color-neutral-4: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 30% * var(--neutral-invert, 1));
+  --med-color-neutral-5: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-1, var(--med-color-neutral-luminosity-factor-1, 0%)) + 40% * var(--neutral-invert, 1));
+  --med-color-neutral-6: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 50% * var(--neutral-invert, 1));
+  --med-color-neutral-7: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 60% * var(--neutral-invert, 1));
+  --med-color-neutral-8: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 70% * var(--neutral-invert, 1));
+  --med-color-neutral-9: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 80% * var(--neutral-invert, 1));
+  --med-color-neutral-10: calc(var(--med-color-neutral-hue, 25) + var(--med-color-neutral-hue-factor, 0)), calc(var(--med-color-neutral-saturation, 10%) + var(--med-color-neutral-saturation-factor, 0%)), calc(var(--med-color-neutral-luminosity, 8%) + var(--med-color-neutral-luminosity-mutable-2, var(--med-color-neutral-luminosity-factor-2, 0%)) + 90% * var(--neutral-invert, 1));
 }
 
 .med-color_primary-1 {

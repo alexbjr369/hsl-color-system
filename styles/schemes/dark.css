@@ -1,5 +1,5 @@
 .color-scheme-dark,
 [color-scheme=dark] {
-  --background: color("neutral", "1");
-  --color: color("neutral", "10");
+  --background: hsl(var(--med-color-neutral-1));
+  --color: hsl(var(--med-color-neutral-10));
 }

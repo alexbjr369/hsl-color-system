@@ -2,13 +2,13 @@ $namespace: med;
 
 //
 // colors configuration
+// default: dark
 //
 $color-hue: (
   primary: 25,
   secondary: 80,
 ) !default;
 $color-steps: 5 !default;
-$color-hue: 25 !default;
 $color-saturation: 80% !default;
 $color-luminosity: (
   1: 20%,
@@ -25,49 +25,9 @@ $color-neutral-steps: 10 !default;
 $color-neutral-hue: 25 !default;
 $color-neutral-saturation: 10% !default;
 $color-neutral-luminosity: 8% !default;
+$color-neutral-invert: var(--neutral-invert, 1) !default;
 $color-neutral-mutable-1: var(--#{$namespace}-color-neutral-luminosity-factor-1, 0%) !default;
 $color-neutral-mutable-2: var(--#{$namespace}-color-neutral-luminosity-factor-2, 0%) !default;
-
-//
-// colors
-//
-$colors: (
-  'brand': (
-    '01': (
-      'color': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--color-saturation) + var(--saturation-factor, 0%)), calc(var(--color-luminosity-mutable-1, 0%) + var(--color-luminosity-1))',
-      'contrast': 'var(--med-color-neutral-01)',
-    ),
-    '02': (
-      'color': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--color-saturation) + var(--saturation-factor, 0%)), calc(var(--color-luminosity-mutable-1, 0%) + var(--color-luminosity-2))',
-      'contrast': 'var(--med-color-neutral-01)',
-    ),
-    '03': (
-      'color': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--color-saturation) + var(--saturation-factor, 0%)), calc(var(--color-luminosity-mutable-1, 0%) + var(--color-luminosity-3))',
-      'contrast': 'var(--med-color-neutral-fixed)',
-    ),
-    '04': (
-      'color': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--color-saturation) + var(--saturation-factor, 0%)), calc(var(--color-luminosity-mutable-1, 0%) + var(--color-luminosity-4))',
-      'contrast': 'var(--med-color-neutral-10)',
-    ),
-    '05': (
-      'color': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--color-saturation) + var(--saturation-factor, 0%)), calc(var(--color-luminosity-mutable-1, 0%) + var(--color-luminosity-5))',
-      'contrast': 'var(--med-color-neutral-10)',
-    ),
-  ),
-) !default;
-
-$neutrals: (
-  '01': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-1, 0%) + var(--neutral-luminosity))',
-  '02': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-1, 0%) + var(--neutral-luminosity) + 10% * var(--neutral-invert))',
-  '03': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-1, 0%) + var(--neutral-luminosity) + 20% * var(--neutral-invert))',
-  '04': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-1, 0%) + var(--neutral-luminosity) + 30% * var(--neutral-invert))',
-  '05': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-1, 0%) + var(--neutral-luminosity) + 40% * var(--neutral-invert))',
-  '06': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-2, 0%) + var(--neutral-luminosity) + 50% * var(--neutral-invert))',
-  '07': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-2, 0%) + var(--neutral-luminosity) + 60% * var(--neutral-invert))',
-  '08': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-2, 0%) + var(--neutral-luminosity) + 70% * var(--neutral-invert))',
-  '09': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-2, 0%) + var(--neutral-luminosity) + 80% * var(--neutral-invert))',
-  '10': 'calc(var(--brand-hue) + var(--hue-factor, 0)), calc(var(--neutral-saturation) + var(--saturation-factor, 0%)), calc(var(--neutral-luminosity-mutable-2, 0%) + var(--neutral-luminosity) + 90% * var(--neutral-invert))',
-) !default;
 
 //
 // base

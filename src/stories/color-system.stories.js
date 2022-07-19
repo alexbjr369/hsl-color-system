@@ -6,6 +6,16 @@ export default {
 };
 
 const Template = ({color}) => {
+
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+  toggleScheme(prefersDark.matches);
+
+  prefersDark.addListener(mediaQuery => toggleScheme(mediaQuery.matches));
+
+  function toggleScheme(shouldAdd) {
+    document.documentElement.setAttribute('color-scheme', `${shouldAdd ? 'dark' : 'light'}`);
+  }
+
   return html`
     <med-base .color=${color}>teste</med-base>
   `;
