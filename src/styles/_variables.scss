@@ -2,7 +2,7 @@ $namespace: med;
 
 //
 // colors configuration
-// default: dark
+// configuration default: dark
 //
 $color-hue: (
   primary: 25,
@@ -25,15 +25,13 @@ $color-neutral-steps: 10 !default;
 $color-neutral-hue: 25 !default;
 $color-neutral-saturation: 10% !default;
 $color-neutral-luminosity: 8% !default;
-$color-neutral-invert: var(--neutral-invert, 1) !default;
+$color-neutral-invert: var(--#{$namespace}-color-neutral-invert, 1) !default;
 $color-neutral-mutable-1: var(--#{$namespace}-color-neutral-luminosity-factor-1, 0%) !default;
 $color-neutral-mutable-2: var(--#{$namespace}-color-neutral-luminosity-factor-2, 0%) !default;
 
 //
 // base
+// background default: dark
 //
-$background-dark: color('neutral', '1');
-$color-dark: color('neutral', '10');
-
-$background-light: color('neutral', '10');
-$color-light: color('neutral', '1');
+$background: color('neutral', '1');
+$color: color('neutral', '10');

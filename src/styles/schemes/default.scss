@@ -2,13 +2,6 @@
 @import '../variables';
 
 :root {
-  --background: #{$background-light};
-  --color: #{$color-light};
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #{$background-dark};
-    --color: #{$color-dark};
-  }
+  --background: #{$background};
+  --color: #{$color};
 }
