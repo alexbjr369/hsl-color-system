@@ -2,3 +2,5 @@
 /loader
 /www
 /storybook-static
+
+src/stories/color-system.stories.js

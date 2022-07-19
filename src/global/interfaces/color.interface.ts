@@ -1,0 +1,1 @@
+export type Color = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | 'brand' | 'aula' | 'material' | 'questoes' | 'revalida' | 'provas' | 'fb-attention' | 'fb-caution' | 'fb-warning' | 'fb-success' | string;

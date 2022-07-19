@@ -1,0 +1,18 @@
+@import '../variables';
+
+:root {
+  //color-scheme: light;
+
+  --background: #{$background-light};
+  --color: #{$color-light};
+}
+
+/* system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    //color-scheme: dark;
+
+    --background: #{$background-dark};
+    --color: #{$color-dark};
+  }
+}

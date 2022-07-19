@@ -1,0 +1,18 @@
+@import '../../styles/functions';
+@import '../../styles/variables';
+
+:host {
+  display: block;
+  padding: 8px 16px;
+  background: hsl(var(--med-color-primary-3));
+  color: hsl(var(--med-color-neutral-fixed));
+}
+
+// //////////
+// color
+// //////////
+
+:host(.med-color) {
+  background: hsl(var(--med-color));
+  color: hsl(var(--med-color-contrast));
+}

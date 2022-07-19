@@ -1,0 +1,92 @@
+@use "sass:math";
+
+@mixin generate-color($name: null, $hue: null, $steps: $color-steps) {
+  $luminosity-factor: math.div(100, $steps);
+  $half: math.ceil(math.div($steps, 2));
+  $mutable: null;
+  $mutable-number: null;
+
+  @for $index from 1 through $steps {
+    @if ($index <= $half) {
+      $mutable-number: 1;
+      $mutable: $color-mutable-1;
+    }
+
+    @if ($index == $half) {
+      $mutable-number: 3;
+      $mutable: $color-mutable-2;
+    }
+
+    @if ($index > $half) {
+      $mutable-number: 2;
+      $mutable: $color-mutable-3;
+    }
+
+    --#{$namespace}-color-#{$name}-#{$index}: calc(var(--#{$namespace}-color-hue, #{$hue}) + var(--#{$namespace}-color-hue-factor, 0)),
+      calc(var(--#{$namespace}-color-saturation, #{$color-saturation}) + var(--#{$namespace}-color-saturation-factor, 0%)),
+      calc(var(--#{$namespace}-color-luminosity-#{$index}, #{map-get($color-luminosity, $index)}) + var(--#{$namespace}-color-luminosity-mutable-#{$mutable-number}, #{$mutable}));
+  }
+}
+
+@mixin generate-color-neutral($steps: $color-neutral-steps) {
+  $luminosity-factor: math.div(100, $steps);
+  $half: math.div($steps, 2);
+  $mutable: null;
+  $mutable-number: null;
+
+  @for $index from 1 through $steps {
+    @if ($index <= $half) {
+      $mutable-number: 1;
+      $mutable: $color-neutral-mutable-1;
+    }
+
+    @if ($index > $half) {
+      $mutable-number: 2;
+      $mutable: $color-neutral-mutable-2;
+    }
+
+    --#{$namespace}-color-neutral-#{$index}: calc(var(--#{$namespace}-color-neutral-hue, #{$color-neutral-hue}) + var(--#{$namespace}-color-neutral-hue-factor, 0)),
+      calc(var(--#{$namespace}-color-neutral-saturation, #{$color-neutral-saturation}) + var(--#{$namespace}-color-neutral-saturation-factor, 0%)),
+      calc(var(--#{$namespace}-color-neutral-luminosity, #{$color-neutral-luminosity}) + var(--#{$namespace}-color-neutral-luminosity-mutable-#{$mutable-number}, #{$mutable}) + #{($index - 1) * $luminosity-factor * 1%});
+  }
+}
+
+@mixin generate-color-classes($name: null, $steps: $color-steps) {
+  $half: math.ceil(math.div($steps, 2));
+
+  @for $index from 1 through $steps {
+    .#{$namespace}-color_#{$name}-#{$index} {
+      --#{$namespace}-color: var(--#{$namespace}-color-#{$name}-#{$index}) !important;
+
+      @if ($index < $half) {
+        --#{$namespace}-color-contrast: var(--#{$namespace}-color-neutral-10) !important;
+      }
+
+      @if ($index == $half) {
+        --#{$namespace}-color-contrast: var(--#{$namespace}-color-neutral-fixed) !important;
+      }
+
+      @if ($index > $half) {
+        --#{$namespace}-color-contrast: var(--#{$namespace}-color-neutral-1) !important;
+      }
+    }
+  }
+}
+
+@mixin generate-color-neutral-classes($steps: $color-neutral-steps) {
+  $half: math.div($steps, 2);
+
+  @for $index from 1 through $steps {
+    .#{$namespace}-color_neutral-#{$index} {
+      --#{$namespace}-color: var(--#{$namespace}-color-neutral-#{$index}) !important;
+
+      @if ($index <= $half) {
+        --#{$namespace}-color-contrast: var(--#{$namespace}-color-neutral-10) !important;
+      }
+
+      @if ($index > $half) {
+        --#{$namespace}-color-contrast: var(--#{$namespace}-color-neutral-1) !important;
+      }
+    }
+  }
+}

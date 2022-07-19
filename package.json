@@ -19,19 +19,44 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate:stencil": "stencil generate",
+    "test:stencil": "stencil test --spec --e2e",
+    "watch:test:stencil": "stencil test --spec --e2e --watchAll",
+    "watch:scss": "sass --no-source-map src/styles:styles --watch",
+    "watch:stencil": "stencil build --docs-readme --watch",
+    "watch:storybook": "start-storybook --port 6006 --no-manager-cache",
+    "start:stencil": "stencil build --dev --watch --serve",
+    "build:stencil": "stencil build --docs-readme",
+    "build:storybook": "build-storybook",
+    "start": "npm-run-all --parallel watch:scss watch:stencil watch:storybook",
+    "build": "npm-run-all build:stencil build:storybook"
   },
   "dependencies": {
     "@stencil/core": "^2.17.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@stencil/sass": "^1.5.2",
+    "@storybook/addon-a11y": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/web-components": "^6.5.9",
     "@types/jest": "^28.1.6",
+    "babel-loader": "^8.2.5",
     "jest": "^28.1.3",
     "jest-cli": "^28.1.3",
-    "puppeteer": "^15.4.0"
+    "lit-html": "^2.2.6",
+    "npm-run-all": "^4.1.5",
+    "postcss-scss": "^4.0.4",
+    "puppeteer": "^15.4.0",
+    "sass": "^1.53.0",
+    "storybook-addon-designs": "^6.3.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^5.0.0"
   }
 }

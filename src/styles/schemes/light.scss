@@ -1,0 +1,9 @@
+@import '../variables';
+
+.color-scheme-light,
+[color-scheme='light'] {
+  //color-scheme: light;
+
+  --background: #{$background-light};
+  --color: #{$color-light};
+}

@@ -1,0 +1,9 @@
+@import '../variables';
+
+.color-scheme-dark,
+[color-scheme='dark'] {
+  //color-scheme: dark;
+
+  --background: #{$background-dark};
+  --color: #{$color-dark};
+}

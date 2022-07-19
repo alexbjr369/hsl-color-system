@@ -1,0 +1,12 @@
+:root {
+  --background: color("neutral", "10");
+  --color: color("neutral", "1");
+}
+
+/* system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: color("neutral", "1");
+    --color: color("neutral", "10");
+  }
+}

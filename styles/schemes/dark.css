@@ -1,0 +1,5 @@
+.color-scheme-dark,
+[color-scheme=dark] {
+  --background: color("neutral", "1");
+  --color: color("neutral", "10");
+}

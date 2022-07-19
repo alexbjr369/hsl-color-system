@@ -1,0 +1,16 @@
+@import '../variables';
+@import '../mixins';
+
+:root {
+  @each $name, $hue in $color-hue {
+    @include generate-color($name, $hue);
+  }
+
+  @include generate-color-neutral();
+}
+
+@each $name, $hue in $color-hue {
+  @include generate-color-classes($name);
+}
+
+@include generate-color-neutral-classes();

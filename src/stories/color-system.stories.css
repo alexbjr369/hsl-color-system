@@ -1,0 +1,59 @@
+.snipet__attribute {
+  color: #9bbbdc;
+}
+
+.snipet__tag {
+  color: #5db0d7;
+}
+
+.snipet__aux {
+  color: #5db0d7;
+}
+
+.snipet__value {
+  color: #f29766;
+}
+
+h2 {
+  margin: 0 10px 0 0;
+}
+
+input {
+  margin: 0;
+}
+
+pre {
+  margin: 0 0 10px 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 10px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.switcher {
+  margin: 0 0 15px 0;
+}
+
+.switcher__list {
+  display: flex;
+  padding: 0;
+  margin: 0 0 15px 0;
+  list-style: none;
+  align-items: center;
+}
+
+.switcher__item {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.switcher__item:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
+.switcher__label {
+  padding: 0 0 0 5px;
+  cursor: pointer;
+}

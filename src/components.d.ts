@@ -5,57 +5,42 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Color } from "./interface";
 export namespace Components {
-    interface MyComponent {
+    interface MedBase {
         /**
-          * The first name
+          * Defines the component color.
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "color"?: Color;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMedBaseElement extends Components.MedBase, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMedBaseElement: {
+        prototype: HTMLMedBaseElement;
+        new (): HTMLMedBaseElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "med-base": HTMLMedBaseElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface MedBase {
         /**
-          * The first name
+          * Defines the component color.
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "color"?: Color;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "med-base": MedBase;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "med-base": LocalJSX.MedBase & JSXBase.HTMLAttributes<HTMLMedBaseElement>;
         }
     }
 }
