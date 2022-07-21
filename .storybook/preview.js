@@ -1,5 +1,8 @@
 import { defineCustomElements } from '../dist/esm/loader';
 
+// storybook
+import '../src/stories/color-system.stories.css';
+
 // medgrupo
 import '../styles/medgrupo.css';
 
@@ -19,6 +22,12 @@ export const parameters = {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
+    },
+  },
+  themes: {
+    target: 'root',
+    onChange: (themeName) => {
+      document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class').textContent = `${themeName.class.join(' ')}`;
     },
   },
 };

@@ -6,11 +6,13 @@
     @include generate-color($name, $hue);
   }
 
-  @include generate-color-neutral();
+  @include generate-color-neutral(8%, 10);
+  @include generate-color-neutral(13%, 9, 5);
 }
 
 @each $name, $hue in $color-hue {
   @include generate-color-classes($name);
 }
 
-@include generate-color-neutral-classes();
+@include generate-color-neutral-classes(10);
+@include generate-color-neutral-classes(9, 5);

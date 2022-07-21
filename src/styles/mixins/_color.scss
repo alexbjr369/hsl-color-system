@@ -26,13 +26,14 @@
   }
 }
 
-@mixin generate-color-neutral($steps: $color-neutral-steps) {
-  $luminosity-factor: math.div(100, $steps);
+@mixin generate-color-neutral($neutral-luminosity, $steps, $steps-variarion: null) {
   $half: math.div($steps, 2);
   $mutable: null;
   $mutable-number: null;
 
   @for $index from 1 through $steps {
+    $luminosity-factor: (($index - 1) * 10);
+
     @if ($index <= $half) {
       $mutable-number: 1;
       $mutable: $color-neutral-mutable-1;
@@ -43,7 +44,7 @@
       $mutable: $color-neutral-mutable-2;
     }
 
-    --#{$namespace}-color-neutral-#{$index}: calc(var(--#{$namespace}-color-neutral-hue, #{$color-neutral-hue}) + var(--#{$namespace}-color-neutral-hue-factor, 0)), calc(var(--#{$namespace}-color-neutral-saturation, #{$color-neutral-saturation}) + var(--#{$namespace}-color-neutral-saturation-factor, 0%)), calc(var(--#{$namespace}-color-neutral-luminosity, #{$color-neutral-luminosity}) + var(--#{$namespace}-color-neutral-luminosity-mutable-#{$mutable-number}, #{$mutable}) + #{($index - 1) * $luminosity-factor * 1%} * #{$color-neutral-invert});
+    --#{$namespace}-color-neutral-#{$index}#{$steps-variarion}: calc(var(--#{$namespace}-color-neutral-hue, #{$color-neutral-hue}) + var(--#{$namespace}-color-neutral-hue-factor, 0)), calc(var(--#{$namespace}-color-neutral-saturation, #{$color-neutral-saturation}) + var(--#{$namespace}-color-neutral-saturation-factor, 0%)), calc(var(--#{$namespace}-color-neutral-luminosity, #{$neutral-luminosity}) + var(--#{$namespace}-color-neutral-luminosity-mutable-#{$mutable-number}, #{$mutable}) + #{$luminosity-factor * 1%} * #{$color-neutral-invert});
   }
 }
 
@@ -69,12 +70,12 @@
   }
 }
 
-@mixin generate-color-neutral-classes($steps: $color-neutral-steps) {
-  $half: math.div($steps, 2);
+@mixin generate-color-neutral-classes($steps, $steps-variarion: null) {
+  $half: math.ceil(math.div($steps, 2));
 
   @for $index from 1 through $steps {
-    .#{$namespace}-color_neutral-#{$index} {
-      --#{$namespace}-color: var(--#{$namespace}-color-neutral-#{$index}) !important;
+    .#{$namespace}-color_neutral-#{$index}#{$steps-variarion} {
+      --#{$namespace}-color: var(--#{$namespace}-color-neutral-#{$index}#{$steps-variarion}) !important;
 
       @if ($index <= $half) {
         --#{$namespace}-color-contrast: var(--#{$namespace}-color-neutral-10) !important;

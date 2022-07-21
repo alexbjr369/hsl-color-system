@@ -5,12 +5,6 @@ export enum Colors {
   PRIMARY_4 = 'primary-4',
   PRIMARY_5 = 'primary-5',
 
-  SECONDARY_1 = 'secondary-1',
-  SECONDARY_2 = 'secondary-2',
-  SECONDARY_3 = 'secondary-3',
-  SECONDARY_4 = 'secondary-4',
-  SECONDARY_5 = 'secondary-5',
-
   NEUTRAL_1 = 'neutral-1',
   NEUTRAL_15 = 'neutral-15',
   NEUTRAL_2 = 'neutral-2',

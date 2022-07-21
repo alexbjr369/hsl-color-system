@@ -5,8 +5,7 @@ $namespace: med;
 // configuration default: dark
 //
 $color-hue: (
-  primary: 25,
-  secondary: 80,
+  primary: 188,
 ) !default;
 $color-steps: 5 !default;
 $color-saturation: 80% !default;
@@ -22,7 +21,7 @@ $color-mutable-2: var(--#{$namespace}-color-neutral-luminosity-factor-2, 0%) !de
 $color-mutable-3: var(--#{$namespace}-color-neutral-luminosity-factor-1, 0%) !default;
 
 $color-neutral-steps: 10 !default;
-$color-neutral-hue: 25 !default;
+$color-neutral-hue: 188 !default;
 $color-neutral-saturation: 10% !default;
 $color-neutral-luminosity: 8% !default;
 $color-neutral-invert: var(--#{$namespace}-color-neutral-invert, 1) !default;
