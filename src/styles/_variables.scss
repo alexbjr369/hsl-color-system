@@ -4,33 +4,123 @@ $namespace: med;
 // colors configuration
 // configuration default: dark
 //
-$color-hue: (
-  primary: 188,
+$color-main-hue: (
+  brand: (
+    primary: 24,
+  ),
+  product-01: (
+    primary: 188,
+    secondary: 169,
+  ),
+  product-02: (
+    primary: 200,
+    secondary: 268,
+  ),
 ) !default;
-$color-steps: 5 !default;
-$color-saturation: 80% !default;
-$color-luminosity: (
-  1: 20%,
-  2: 30%,
-  3: 50%,
-  4: 70%,
-  5: 80%,
+$color-main-saturation: (
+  brand: (
+    primary: 80%,
+  ),
+  product-01: (
+    primary: 80%,
+    secondary: 80%,
+  ),
+  product-02: (
+    primary: 80%,
+    secondary: 80%,
+  ),
 ) !default;
-$color-mutable-1: var(--#{$namespace}-color-neutral-luminosity-factor-1, 0%) !default;
-$color-mutable-2: var(--#{$namespace}-color-neutral-luminosity-factor-2, 0%) !default;
-$color-mutable-3: var(--#{$namespace}-color-neutral-luminosity-factor-1, 0%) !default;
+$color-main-luminosity: (
+  brand: (
+    primary: 10%,
+  ),
+  product-01: (
+    primary: 10%,
+    secondary: 10%,
+  ),
+  product-02: (
+    primary: 10%,
+    secondary: 10%,
+  ),
+) !default;
+$color-main-variations: (
+  brand: (
+    primary: (
+      2,
+      3,
+      5,
+      7,
+      8,
+    ),
+  ),
+  product-01: (
+    primary: (
+      2,
+      3,
+      5,
+      7,
+      8,
+    ),
+    secondary: (
+      2,
+      3,
+      5,
+      7,
+      8,
+    ),
+  ),
+  product-02: (
+    primary: (
+      2,
+      3,
+      5,
+      7,
+      8,
+    ),
+    secondary: (
+      2,
+      3,
+      5,
+      7,
+      8,
+    ),
+  ),
+) !default;
 
-$color-neutral-steps: 10 !default;
-$color-neutral-hue: 188 !default;
-$color-neutral-saturation: 10% !default;
-$color-neutral-luminosity: 8% !default;
-$color-neutral-invert: var(--#{$namespace}-color-neutral-invert, 1) !default;
-$color-neutral-mutable-1: var(--#{$namespace}-color-neutral-luminosity-factor-1, 0%) !default;
-$color-neutral-mutable-2: var(--#{$namespace}-color-neutral-luminosity-factor-2, 0%) !default;
-
-//
-// base
-// background default: dark
-//
-$background: color('neutral', '1');
-$color: color('neutral', '10');
+$color-neutral-hue: (
+  primary: 24,
+  secondary: 24,
+) !default;
+$color-neutral-saturation: (
+  primary: 10%,
+  secondary: 10%,
+) !default;
+$color-neutral-luminosity: (
+  primary: 8%,
+  secondary: 13%,
+) !default;
+$color-neutral-variations: (
+  primary: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+  ),
+  secondary: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+  ),
+) !default;

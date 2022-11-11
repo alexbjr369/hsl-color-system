@@ -2,7 +2,7 @@ import { html, render } from 'lit-html';
 import { Colors } from '../global/enums/color.enum';
 
 export default {
-  title: 'Medgrupo',
+  title: 'Base',
 };
 
 interface Config {
@@ -28,7 +28,7 @@ const Template = ({ color }) => {
     const luminosityRangeEl = document.querySelector('#luminosity');
 
     // function calls
-    config.scheme = 'dark'; // medgrupo's default scheme
+    config.scheme = 'dark'; // color system default scheme
     render(setSnipet(config), snipetEl);
     toggleScheme(deviceDefaultScheme);
 

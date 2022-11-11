@@ -1,7 +1,11 @@
 {
-  "name": "medgrupo-color-system",
+  "name": "hsl-color-system",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "HSL Color System",
+  "author": "Alex Bleggi <alexbjr369@gmail.com>",
+  "homepage": "https://alexbleggi.netlify.app",
+  "repository": "https://github.com/alexbjr369/hsl-color-system.git",
+  "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,11 +13,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/medgrupo-color-system/medgrupo-color-system.esm.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
-  },
+  "unpkg": "dist/hsl-color-system/hsl-color-system.esm.js",
   "files": [
     "dist/",
     "loader/"

@@ -1,18 +1,29 @@
 @import '../variables';
 @import '../mixins';
 
+//
+// css custom properties
+//
 :root {
-  @each $name, $hue in $color-hue {
-    @include generate-color($name, $hue);
-  }
+  /* @each $key, $value in $color-main-hue {
+    $name: $key;
 
-  @include generate-color-neutral(8%, 10);
-  @include generate-color-neutral(13%, 9, 5);
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+
+      @include generate-color-main($name, $set, $hue);
+    }
+  } */
+
+  @include generate-color-main($color-main-hue, $color-main-saturation, $color-main-luminosity, $color-main-variations);
+  @include generate-color-neutral($color-neutral-hue, $color-neutral-saturation, $color-neutral-luminosity, $color-neutral-variations);
 }
 
-@each $name, $hue in $color-hue {
-  @include generate-color-classes($name);
+//
+// css classes
+//
+/* @each $color-name, $color-hue in $color-hue {
+  @include generate-color-main-classes($color-name);
 }
-
-@include generate-color-neutral-classes(10);
-@include generate-color-neutral-classes(9, 5);
+ */
