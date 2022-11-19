@@ -16,7 +16,7 @@
     }
   } */
 
-  @include generate-color-main($color-main-hue, $color-main-saturation, $color-main-luminosity, $color-main-variations);
+  @include generate-color-main($color-main-hue, $color-main-saturation, $color-main-luminosity);
   @include generate-color-neutral($color-neutral-hue, $color-neutral-saturation, $color-neutral-luminosity, $color-neutral-variations);
 }
 

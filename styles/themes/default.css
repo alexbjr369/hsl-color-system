@@ -1,7 +1,3 @@
-/**
- * default luminosity: 10%
- * luminosity = default luminosity + luminosity diff
- */
 :root {
   /* @each $key, $value in $color-main-hue {
     $name: $key;

@@ -1,9 +1,5 @@
 $namespace: med;
 
-//
-// colors configuration
-// configuration default: dark
-//
 $color-main-hue: (
   brand: (
     primary: 24,
@@ -32,57 +28,44 @@ $color-main-saturation: (
 ) !default;
 $color-main-luminosity: (
   brand: (
-    primary: 10%,
-  ),
-  product-01: (
-    primary: 10%,
-    secondary: 10%,
-  ),
-  product-02: (
-    primary: 10%,
-    secondary: 10%,
-  ),
-) !default;
-$color-main-variations: (
-  brand: (
     primary: (
-      2,
-      3,
-      5,
-      7,
-      8,
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
     ),
   ),
   product-01: (
     primary: (
-      2,
-      3,
-      5,
-      7,
-      8,
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
     ),
     secondary: (
-      2,
-      3,
-      5,
-      7,
-      8,
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
     ),
   ),
   product-02: (
     primary: (
-      2,
-      3,
-      5,
-      7,
-      8,
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
     ),
     secondary: (
-      2,
-      3,
-      5,
-      7,
-      8,
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
     ),
   ),
 ) !default;

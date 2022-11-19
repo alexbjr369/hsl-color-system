@@ -1,19 +1,24 @@
 @use "sass:math";
 
-// @mixin generate-color-main($name: null, $set: null, $hue: null, $saturation: null, $variations: $color-main-variations) {
-//   @for $index from 1 through $variations {
-//     $variation: $index * 100;
-//     $luminosity: map-get($color-main-luminosity, $index);
+// @mixin generate-color-main($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+//   @each $key, $value in $hue-map {
+//     $name: $key;
 
-//     --#{$namespace}-color-#{$name}-#{$set}-#{$variation}: hsl(#{$hue}, #{$saturation}, #{$luminosity});
+//     @each $key-2, $value-2 in $value {
+//       $set: $key-2;
+//       $hue: $value-2;
+//       $saturation: map-get(map-get($saturation-map, $key), $key-2);
+//       //$luminosity: map-get(map-get($luminosity-map, $key), $key-2);
+//       $variation: map-get(map-get($luminosity-map, $key), $key-2);
+
+//       @each $key-3, $value-3 in $variation {
+//         --#{$namespace}-color-#{$name}-#{$set}-#{$key-3}: hsl(#{$hue}, #{$saturation}, #{$value-3});
+//       }
+//     }
 //   }
 // }
 
-/**
- * default luminosity: 10%
- * luminosity = default luminosity + luminosity diff
- */
-@mixin generate-color-main($hue-map: null, $saturation-map: null, $luminosity-map: null, $variations-map: null, $luminosity-diff: null) {
+@mixin generate-color-main($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $name: $key;
 
@@ -21,14 +26,12 @@
       $set: $key-2;
       $hue: $value-2;
       $saturation: map-get(map-get($saturation-map, $key), $key-2);
-      $luminosity: map-get(map-get($luminosity-map, $key), $key-2);
-      $variation: map-get(map-get($variations-map, $key), $key-2);
+      $variation: map-get(map-get($luminosity-map, $key), $key-2);
 
-      @each $key-3 in $variation {
-        $variation-index: $key-3 * 100;
-        $luminosity-index: $key-3 * ($luminosity) + if($luminosity-diff != null, $luminosity-diff, 0);
+      @each $key-3, $value-3 in $variation {
+        $luminosity: $value-3;
 
-        --#{$namespace}-color-#{$name}-#{$set}-#{$variation-index}: hsl(#{$hue}, #{$saturation}, #{$luminosity-index});
+        --#{$namespace}-color-#{$name}-#{$set}-#{$key-3}: hsl(#{$hue}, #{$saturation}, #{$luminosity});
       }
     }
   }
