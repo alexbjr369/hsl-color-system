@@ -1,61 +1,17 @@
-:root {
-  /* @each $key, $value in $color-main-hue {
-    $name: $key;
+/* Error: Undefined variable.
+ *    ,
+ * 20 |   @include generate-color-neutral($color-neutral-hue, $color-neutral-saturation, $color-neutral-luminosity, $color-neutral-variations);
+ *    |                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   src\styles\themes\default.scss 20:109  root stylesheet */
 
-    @each $key-2, $value-2 in $value {
-      $set: $key-2;
-      $hue: $value-2;
-
-      @include generate-color-main($name, $set, $hue);
-    }
-  } */
-  --med-color-brand-primary-200: hsl(24, 80%, 20%);
-  --med-color-brand-primary-300: hsl(24, 80%, 30%);
-  --med-color-brand-primary-500: hsl(24, 80%, 50%);
-  --med-color-brand-primary-700: hsl(24, 80%, 70%);
-  --med-color-brand-primary-800: hsl(24, 80%, 80%);
-  --med-color-product-01-primary-200: hsl(188, 80%, 20%);
-  --med-color-product-01-primary-300: hsl(188, 80%, 30%);
-  --med-color-product-01-primary-500: hsl(188, 80%, 50%);
-  --med-color-product-01-primary-700: hsl(188, 80%, 70%);
-  --med-color-product-01-primary-800: hsl(188, 80%, 80%);
-  --med-color-product-01-secondary-200: hsl(169, 80%, 20%);
-  --med-color-product-01-secondary-300: hsl(169, 80%, 30%);
-  --med-color-product-01-secondary-500: hsl(169, 80%, 50%);
-  --med-color-product-01-secondary-700: hsl(169, 80%, 70%);
-  --med-color-product-01-secondary-800: hsl(169, 80%, 80%);
-  --med-color-product-02-primary-200: hsl(200, 80%, 20%);
-  --med-color-product-02-primary-300: hsl(200, 80%, 30%);
-  --med-color-product-02-primary-500: hsl(200, 80%, 50%);
-  --med-color-product-02-primary-700: hsl(200, 80%, 70%);
-  --med-color-product-02-primary-800: hsl(200, 80%, 80%);
-  --med-color-product-02-secondary-200: hsl(268, 80%, 20%);
-  --med-color-product-02-secondary-300: hsl(268, 80%, 30%);
-  --med-color-product-02-secondary-500: hsl(268, 80%, 50%);
-  --med-color-product-02-secondary-700: hsl(268, 80%, 70%);
-  --med-color-product-02-secondary-800: hsl(268, 80%, 80%);
-  --med-color-neutral-primary-100: hsl(24, 10%, 8%);
-  --med-color-neutral-primary-200: hsl(24, 10%, 16%);
-  --med-color-neutral-primary-300: hsl(24, 10%, 24%);
-  --med-color-neutral-primary-400: hsl(24, 10%, 32%);
-  --med-color-neutral-primary-500: hsl(24, 10%, 40%);
-  --med-color-neutral-primary-600: hsl(24, 10%, 48%);
-  --med-color-neutral-primary-700: hsl(24, 10%, 56%);
-  --med-color-neutral-primary-800: hsl(24, 10%, 64%);
-  --med-color-neutral-primary-900: hsl(24, 10%, 72%);
-  --med-color-neutral-primary-1000: hsl(24, 10%, 80%);
-  --med-color-neutral-secondary-100: hsl(24, 10%, 13%);
-  --med-color-neutral-secondary-200: hsl(24, 10%, 26%);
-  --med-color-neutral-secondary-300: hsl(24, 10%, 39%);
-  --med-color-neutral-secondary-400: hsl(24, 10%, 52%);
-  --med-color-neutral-secondary-500: hsl(24, 10%, 65%);
-  --med-color-neutral-secondary-600: hsl(24, 10%, 78%);
-  --med-color-neutral-secondary-700: hsl(24, 10%, 91%);
-  --med-color-neutral-secondary-800: hsl(24, 10%, 104%);
-  --med-color-neutral-secondary-900: hsl(24, 10%, 117%);
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 20 \2502    @include generate-color-neutral($color-neutral-hue, $color-neutral-saturation, $color-neutral-luminosity, $color-neutral-variations);\a    \2502                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src\\styles\\themes\\default.scss 20:109  root stylesheet";
 }
-
-/* @each $color-name, $color-hue in $color-hue {
-  @include generate-color-main-classes($color-name);
-}
- */
