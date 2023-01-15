@@ -1,6 +1,7 @@
 import { Component, h, Host, Prop } from '@stencil/core';
 import { generateClasses } from '../../global/utilities/color';
 import { Colors } from '../../interface';
+import { namespace } from '../../global/constants/global.constant';
 
 @Component({
   tag: 'med-base',
@@ -17,7 +18,7 @@ export class MedBase {
     const { color } = this;
 
     return (
-      <Host class={generateClasses(color, { 'med-base': true })}>
+      <Host class={generateClasses(color, { [`${namespace}-base`]: true })}>
         <slot></slot>
       </Host>
     );

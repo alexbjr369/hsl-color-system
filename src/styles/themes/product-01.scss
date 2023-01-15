@@ -1,14 +1,19 @@
 @import '../variables';
+@import '../variables/product-01/variables';
 @import '../mixins';
 
 //
 // css custom properties
 //
-.med-theme-product-01 {
-  @include generate-color-main-product-01($color-main-hue, $color-main-saturation, $color-main-luminosity);
+.#{$namespace}-theme-product-01 {
+  @include generate-color-main($color-main-hue, $color-main-saturation, $color-main-luminosity);
+  @include generate-color-neutral($color-neutral-hue, $color-neutral-saturation, $color-neutral-luminosity);
+  @include generate-color-feedback($color-feedback-hue, $color-feedback-saturation, $color-feedback-luminosity);
 }
 
 //
 // css classes
 //
-@include generate-color-main-product-01-classes($color-main-hue, $color-main-saturation, $color-main-luminosity, $color-main-contrast);
+@include generate-color-main-classes($color-main-hue, $color-main-saturation, $color-main-luminosity, $color-main-contrast);
+@include generate-color-neutral-classes($color-neutral-hue, $color-neutral-saturation, $color-neutral-luminosity, $color-neutral-contrast);
+@include generate-color-feedback-classes($color-feedback-hue, $color-feedback-saturation, $color-feedback-luminosity, $color-feedback-contrast);

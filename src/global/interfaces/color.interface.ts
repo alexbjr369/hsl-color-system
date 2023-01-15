@@ -1,6 +1,37 @@
-export type ColorsBrand = 'brand-primary-200' | 'brand-primary-300' | 'brand-primary-500' | 'brand-primary-700' | 'brand-primary-800';
-export type ColorsProduct01 = 'product-01-primary-200' | 'product-01-primary-300' | 'product-01-primary-500' | 'product-01-primary-700' | 'product-01-primary-800' | 'product-01-secondary-200' | 'product-01-secondary-300' | 'product-01-secondary-500' | 'product-01-secondary-700' | 'product-01-secondary-800';
-export type ColorsProduct02 = 'product-02-primary-200' | 'product-02-primary-300' | 'product-02-primary-500' | 'product-02-primary-700' | 'product-02-primary-800' | 'product-02-secondary-200' | 'product-02-secondary-300' | 'product-02-secondary-500' | 'product-02-secondary-700' | 'product-02-secondary-800';
+export type ColorsProduct01 =
+  | 'product-01-brand-200'
+  | 'product-01-brand-300'
+  | 'product-01-brand-500'
+  | 'product-01-brand-700'
+  | 'product-01-brand-800'
+  | 'product-01-primary-200'
+  | 'product-01-primary-300'
+  | 'product-01-primary-500'
+  | 'product-01-primary-700'
+  | 'product-01-primary-800'
+  | 'product-01-secondary-200'
+  | 'product-01-secondary-300'
+  | 'product-01-secondary-500'
+  | 'product-01-secondary-700'
+  | 'product-01-secondary-800';
+
+export type ColorsProduct02 =
+  | 'product-02-brand-200'
+  | 'product-02-brand-300'
+  | 'product-02-brand-500'
+  | 'product-02-brand-700'
+  | 'product-02-brand-800'
+  | 'product-02-primary-200'
+  | 'product-02-primary-300'
+  | 'product-02-primary-500'
+  | 'product-02-primary-700'
+  | 'product-02-primary-800'
+  | 'product-02-secondary-200'
+  | 'product-02-secondary-300'
+  | 'product-02-secondary-500'
+  | 'product-02-secondary-700'
+  | 'product-02-secondary-800';
+
 export type ColorsNeutral =
   | 'neutral-primary-80'
   | 'neutral-primary-130'
@@ -21,5 +52,7 @@ export type ColorsNeutral =
   | 'neutral-primary-880'
   | 'neutral-primary-930'
   | 'neutral-primary-980';
+
 export type ColorsFeedback = 'success-primary-650' | 'attention-primary-650' | 'caution-primary-650' | 'warning-primary-650';
-export type Colors = ColorsBrand | ColorsProduct01 | ColorsProduct02 | ColorsNeutral | ColorsFeedback;
+
+export type Colors = ColorsProduct01 | ColorsProduct02 | ColorsNeutral | ColorsFeedback;

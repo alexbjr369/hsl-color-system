@@ -1,67 +1,21 @@
 //
 // color system
 //
-@mixin generate-color-main-brand($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+@mixin generate-color-main($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $name: $key;
 
-    @if ($name == 'brand') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
 
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
 
-          --#{$namespace}-color-#{$name}-#{$set}-#{$variation}: hsl(var(--#{$namespace}-color-#{$name}-#{$set}-hue), var(--#{$namespace}-color-#{$name}-#{$set}-saturation), var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity));
-        }
-      }
-    }
-  }
-}
-
-@mixin generate-color-main-product-01($hue-map: null, $saturation-map: null, $luminosity-map: null) {
-  @each $key, $value in $hue-map {
-    $name: $key;
-
-    @if ($name == 'product-01') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
-
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
-
-          --#{$namespace}-color-#{$name}-#{$set}-#{$variation}: hsl(var(--#{$namespace}-color-#{$name}-#{$set}-hue), var(--#{$namespace}-color-#{$name}-#{$set}-saturation), var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity));
-        }
-      }
-    }
-  }
-}
-
-@mixin generate-color-main-product-02($hue-map: null, $saturation-map: null, $luminosity-map: null) {
-  @each $key, $value in $hue-map {
-    $name: $key;
-
-    @if ($name == 'product-02') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
-
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
-
-          --#{$namespace}-color-#{$name}-#{$set}-#{$variation}: hsl(var(--#{$namespace}-color-#{$name}-#{$set}-hue), var(--#{$namespace}-color-#{$name}-#{$set}-saturation), var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity));
-        }
+        --#{$namespace}-color-#{$name}-#{$set}-#{$variation}: hsl(var(--#{$namespace}-color-#{$name}-#{$set}-hue), var(--#{$namespace}-color-#{$name}-#{$set}-saturation), var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity));
       }
     }
   }
@@ -106,76 +60,24 @@
 //
 // css custom properties
 //
-@mixin generate-dark-scheme-main-brand-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+@mixin generate-dark-scheme-main-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $name: $key;
 
-    @if ($name == 'brand') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
 
-        --#{$namespace}-color-#{$name}-#{$set}-hue: #{$hue};
-        --#{$namespace}-color-#{$name}-#{$set}-saturation: #{$saturation};
+      --#{$namespace}-color-#{$name}-#{$set}-hue: #{$hue};
+      --#{$namespace}-color-#{$name}-#{$set}-saturation: #{$saturation};
 
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
 
-          --#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity: #{$luminosity};
-        }
-      }
-    }
-  }
-}
-
-@mixin generate-dark-scheme-main-product-01-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
-  @each $key, $value in $hue-map {
-    $name: $key;
-
-    @if ($name == 'product-01') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
-
-        --#{$namespace}-color-#{$name}-#{$set}-hue: #{$hue};
-        --#{$namespace}-color-#{$name}-#{$set}-saturation: #{$saturation};
-
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
-
-          --#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity: #{$luminosity};
-        }
-      }
-    }
-  }
-}
-
-@mixin generate-dark-scheme-main-product-02-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
-  @each $key, $value in $hue-map {
-    $name: $key;
-
-    @if ($name == 'product-02') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
-
-        --#{$namespace}-color-#{$name}-#{$set}-hue: #{$hue};
-        --#{$namespace}-color-#{$name}-#{$set}-saturation: #{$saturation};
-
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
-
-          --#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity: #{$luminosity};
-        }
+        --#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity: #{$luminosity};
       }
     }
   }
@@ -226,78 +128,24 @@
 //
 // css classes
 //
-@mixin generate-color-main-brand-classes($hue-map: null, $saturation-map: null, $luminosity-map: null, $contrast-map: null) {
+@mixin generate-color-main-classes($hue-map: null, $saturation-map: null, $luminosity-map: null, $contrast-map: null) {
   @each $key, $value in $hue-map {
     $name: $key;
 
-    @if ($name == 'brand') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
 
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
-          $contrast: map-get(map-get(map-get($contrast-map, $name), $set), $variation);
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
+        $contrast: map-get(map-get(map-get($contrast-map, $name), $set), $variation);
 
-          .#{$namespace}-color_#{$name}-#{$set}-#{$variation} {
-            --#{$namespace}-color: var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}) !important;
-            --#{$namespace}-color-contrast: #{$contrast} !important;
-          }
-        }
-      }
-    }
-  }
-}
-
-@mixin generate-color-main-product-01-classes($hue-map: null, $saturation-map: null, $luminosity-map: null, $contrast-map: null) {
-  @each $key, $value in $hue-map {
-    $name: $key;
-
-    @if ($name == 'product-01') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
-
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
-          $contrast: map-get(map-get(map-get($contrast-map, $name), $set), $variation);
-
-          .#{$namespace}-color_#{$name}-#{$set}-#{$variation} {
-            --#{$namespace}-color: var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}) !important;
-            --#{$namespace}-color-contrast: #{$contrast} !important;
-          }
-        }
-      }
-    }
-  }
-}
-
-@mixin generate-color-main-product-02-classes($hue-map: null, $saturation-map: null, $luminosity-map: null, $contrast-map: null) {
-  @each $key, $value in $hue-map {
-    $name: $key;
-
-    @if ($name == 'product-02') {
-      @each $key-2, $value-2 in $value {
-        $set: $key-2;
-        $hue: $value-2;
-        $saturation: map-get(map-get($saturation-map, $name), $set);
-        $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
-
-        @each $key-3, $value-3 in $luminosity-variation {
-          $luminosity: $value-3;
-          $variation: $key-3;
-          $contrast: map-get(map-get(map-get($contrast-map, $name), $set), $variation);
-
-          .#{$namespace}-color_#{$name}-#{$set}-#{$variation} {
-            --#{$namespace}-color: var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}) !important;
-            --#{$namespace}-color-contrast: #{$contrast} !important;
-          }
+        .#{$namespace}-color_#{$name}-#{$set}-#{$variation} {
+          --#{$namespace}-color: var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}) !important;
+          --#{$namespace}-color-contrast: #{$contrast} !important;
         }
       }
     }

@@ -4,8 +4,8 @@
 :host {
   display: block;
   padding: 8px 16px;
-  background: var(--med-color-brand-primary-500);
-  color: var(--med-color-neutral-primary-980);
+  background: var(--#{$namespace}-color-brand-primary-500);
+  color: var(--#{$namespace}-color-neutral-primary-980);
 }
 
 // //////////
@@ -13,6 +13,6 @@
 // //////////
 
 :host(.#{$namespace}-color) {
-  background: var(--med-color);
-  color: var(--med-color-contrast);
+  background: var(--#{$namespace}-color);
+  color: var(--#{$namespace}-color-contrast);
 }

@@ -1,12 +1,9 @@
-export enum ColorsBrand {
-  BRAND_PRIMARY_200 = 'brand-primary-200',
-  BRAND_PRIMARY_300 = 'brand-primary-300',
-  BRAND_PRIMARY_500 = 'brand-primary-500',
-  BRAND_PRIMARY_700 = 'brand-primary-700',
-  BRAND_PRIMARY_800 = 'brand-primary-800',
-}
-
 export enum ColorsProduct01 {
+  PRODUCT_01_BRAND_200 = 'product-01-brand-200',
+  PRODUCT_01_BRAND_300 = 'product-01-brand-300',
+  PRODUCT_01_BRAND_500 = 'product-01-brand-500',
+  PRODUCT_01_BRAND_700 = 'product-01-brand-700',
+  PRODUCT_01_BRAND_800 = 'product-01-brand-800',
   PRODUCT_01_PRIMARY_200 = 'product-01-primary-200',
   PRODUCT_01_PRIMARY_300 = 'product-01-primary-300',
   PRODUCT_01_PRIMARY_500 = 'product-01-primary-500',
@@ -20,6 +17,11 @@ export enum ColorsProduct01 {
 }
 
 export enum ColorsProduct02 {
+  PRODUCT_02_BRAND_200 = 'product-02-brand-200',
+  PRODUCT_02_BRAND_300 = 'product-02-brand-300',
+  PRODUCT_02_BRAND_500 = 'product-02-brand-500',
+  PRODUCT_02_BRAND_700 = 'product-02-brand-700',
+  PRODUCT_02_BRAND_800 = 'product-02-brand-800',
   PRODUCT_02_PRIMARY_200 = 'product-02-primary-200',
   PRODUCT_02_PRIMARY_300 = 'product-02-primary-300',
   PRODUCT_02_PRIMARY_500 = 'product-02-primary-500',

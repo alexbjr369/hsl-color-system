@@ -1,5 +1,5 @@
 import { html, render } from 'lit-html';
-import { ColorsBrand, ColorsFeedback, ColorsNeutral, ColorsProduct01, ColorsProduct02 } from '../global/enums/color.enum';
+import { ColorsFeedback, ColorsNeutral, ColorsProduct01, ColorsProduct02 } from '../global/enums/color.enum';
 
 export default {
   title: 'Color System',
@@ -135,11 +135,11 @@ const Template = ({ color }) => {
 export const Overview = Template.bind({});
 Overview.argTypes = {
   color: {
-    options: [...Object.values(ColorsBrand), ...Object.values(ColorsProduct01), ...Object.values(ColorsProduct02), ...Object.values(ColorsNeutral), ...Object.values(ColorsFeedback)],
+    options: [...Object.values(ColorsProduct01), ...Object.values(ColorsProduct02), ...Object.values(ColorsNeutral), ...Object.values(ColorsFeedback)],
     control: { type: 'select' },
     description: 'Defines the component color.',
     table: {
-      type: { summary: Object.values([ColorsBrand, ColorsProduct01, ColorsProduct02, ColorsNeutral, ColorsFeedback]).join(' |') },
+      type: { summary: Object.values([ColorsProduct01, ColorsProduct02, ColorsNeutral, ColorsFeedback]).join(' |') },
       defaultValue: { summary: 'undefined' },
     },
   },

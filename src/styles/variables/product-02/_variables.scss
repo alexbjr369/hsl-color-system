@@ -1,0 +1,192 @@
+@import '../../variables';
+
+$color-main-hue: (
+  product-02: (
+    brand: 24,
+    primary: 200,
+    secondary: 268,
+  ),
+) !default;
+$color-main-saturation: (
+  product-02: (
+    brand: 80%,
+    primary: 80%,
+    secondary: 80%,
+  ),
+) !default;
+$color-main-luminosity: (
+  product-02: (
+    brand: (
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
+    ),
+    primary: (
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
+    ),
+    secondary: (
+      200: 20%,
+      300: 30%,
+      500: 50%,
+      700: 70%,
+      800: 80%,
+    ),
+  ),
+) !default;
+$color-main-contrast: (
+  product-02: (
+    brand: (
+      200: var(--#{$namespace}-color-neutral-primary-980),
+      300: var(--#{$namespace}-color-neutral-primary-980),
+      500: var(--#{$namespace}-color-neutral-primary-980),
+      700: var(--#{$namespace}-color-neutral-primary-80),
+      800: var(--#{$namespace}-color-neutral-primary-80),
+    ),
+    primary: (
+      200: var(--#{$namespace}-color-neutral-primary-980),
+      300: var(--#{$namespace}-color-neutral-primary-980),
+      500: var(--#{$namespace}-color-neutral-primary-980),
+      700: var(--#{$namespace}-color-neutral-primary-80),
+      800: var(--#{$namespace}-color-neutral-primary-80),
+    ),
+    secondary: (
+      200: var(--#{$namespace}-color-neutral-primary-980),
+      300: var(--#{$namespace}-color-neutral-primary-980),
+      500: var(--#{$namespace}-color-neutral-primary-980),
+      700: var(--#{$namespace}-color-neutral-primary-80),
+      800: var(--#{$namespace}-color-neutral-primary-80),
+    ),
+  ),
+) !default;
+
+$color-neutral-hue: (
+  primary: 80,
+) !default;
+$color-neutral-saturation: (
+  primary: 10%,
+) !default;
+$color-neutral-luminosity: (
+  primary: (
+    80: 8%,
+    130: 13%,
+    180: 18%,
+    230: 23%,
+    280: 28%,
+    330: 33%,
+    380: 38%,
+    430: 43%,
+    480: 48%,
+    530: 53%,
+    580: 58%,
+    630: 63%,
+    680: 68%,
+    730: 73%,
+    780: 78%,
+    830: 83%,
+    880: 88%,
+    930: 93%,
+    980: 98%,
+  ),
+) !default;
+$color-neutral-contrast: (
+  primary: (
+    80: var(--#{$namespace}-color-neutral-primary-980),
+    130: var(--#{$namespace}-color-neutral-primary-980),
+    180: var(--#{$namespace}-color-neutral-primary-980),
+    230: var(--#{$namespace}-color-neutral-primary-980),
+    280: var(--#{$namespace}-color-neutral-primary-980),
+    330: var(--#{$namespace}-color-neutral-primary-980),
+    380: var(--#{$namespace}-color-neutral-primary-980),
+    430: var(--#{$namespace}-color-neutral-primary-980),
+    480: var(--#{$namespace}-color-neutral-primary-980),
+    530: var(--#{$namespace}-color-neutral-primary-80),
+    580: var(--#{$namespace}-color-neutral-primary-80),
+    630: var(--#{$namespace}-color-neutral-primary-80),
+    680: var(--#{$namespace}-color-neutral-primary-80),
+    730: var(--#{$namespace}-color-neutral-primary-80),
+    780: var(--#{$namespace}-color-neutral-primary-80),
+    830: var(--#{$namespace}-color-neutral-primary-80),
+    880: var(--#{$namespace}-color-neutral-primary-80),
+    930: var(--#{$namespace}-color-neutral-primary-80),
+    980: var(--#{$namespace}-color-neutral-primary-80),
+  ),
+) !default;
+
+$color-feedback-hue: (
+  success: (
+    primary: 128,
+  ),
+  attention: (
+    primary: 44,
+  ),
+  caution: (
+    primary: 24,
+  ),
+  warning: (
+    primary: 4,
+  ),
+) !default;
+$color-feedback-saturation: (
+  success: (
+    primary: 80%,
+  ),
+  attention: (
+    primary: 80%,
+  ),
+  caution: (
+    primary: 80%,
+  ),
+  warning: (
+    primary: 80%,
+  ),
+) !default;
+$color-feedback-luminosity: (
+  success: (
+    primary: (
+      650: 65%,
+    ),
+  ),
+  attention: (
+    primary: (
+      650: 65%,
+    ),
+  ),
+  caution: (
+    primary: (
+      650: 65%,
+    ),
+  ),
+  warning: (
+    primary: (
+      650: 65%,
+    ),
+  ),
+) !default;
+$color-feedback-contrast: (
+  success: (
+    primary: (
+      650: var(--#{$namespace}-color-neutral-primary-980),
+    ),
+  ),
+  attention: (
+    primary: (
+      650: var(--#{$namespace}-color-neutral-primary-980),
+    ),
+  ),
+  caution: (
+    primary: (
+      650: var(--#{$namespace}-color-neutral-primary-980),
+    ),
+  ),
+  warning: (
+    primary: (
+      650: var(--#{$namespace}-color-neutral-primary-980),
+    ),
+  ),
+) !default;
