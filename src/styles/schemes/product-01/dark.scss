@@ -1,0 +1,10 @@
+@import '../../variables';
+@import '../../mixins';
+
+//
+// css custom properties dark
+//
+[data-#{$namespace}-color-scheme='dark'],
+.#{$namespace}-color-scheme-dark {
+  @include generate-dark-scheme-main-product-01-custom-properties($color-main-hue, $color-main-saturation, $color-main-luminosity);
+}

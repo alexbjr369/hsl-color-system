@@ -1,0 +1,9 @@
+@import '../../variables';
+@import '../../mixins';
+
+//
+// css custom properties light
+//
+[#{$namespace}-color-scheme='light'],
+.#{$namespace}-color-scheme-light {
+}

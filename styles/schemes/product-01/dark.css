@@ -1,0 +1,17 @@
+[data-med-color-scheme=dark],
+.med-color-scheme-dark {
+  --med-color-product-01-primary-hue: 188;
+  --med-color-product-01-primary-saturation: 80%;
+  --med-color-product-01-primary-200-luminosity: 20%;
+  --med-color-product-01-primary-300-luminosity: 30%;
+  --med-color-product-01-primary-500-luminosity: 50%;
+  --med-color-product-01-primary-700-luminosity: 70%;
+  --med-color-product-01-primary-800-luminosity: 80%;
+  --med-color-product-01-secondary-hue: 169;
+  --med-color-product-01-secondary-saturation: 80%;
+  --med-color-product-01-secondary-200-luminosity: 20%;
+  --med-color-product-01-secondary-300-luminosity: 30%;
+  --med-color-product-01-secondary-500-luminosity: 50%;
+  --med-color-product-01-secondary-700-luminosity: 70%;
+  --med-color-product-01-secondary-800-luminosity: 80%;
+}

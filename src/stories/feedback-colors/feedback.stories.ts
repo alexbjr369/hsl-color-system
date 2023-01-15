@@ -9,4 +9,4 @@ const Template = () => {
   return html` ${Object.values(ColorsFeedback).map((color) => html`<med-base .color=${color}>${color}</med-base>`)} `;
 };
 
-export const Brand = Template.bind({});
+export const Default = Template.bind({});
