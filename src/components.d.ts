@@ -13,6 +13,12 @@ export namespace Components {
          */
         "color"?: Colors;
     }
+    interface MedBase2 {
+        /**
+          * Defines the component color.
+         */
+        "color"?: Colors;
+    }
 }
 declare global {
     interface HTMLMedBaseElement extends Components.MedBase, HTMLStencilElement {
@@ -21,8 +27,15 @@ declare global {
         prototype: HTMLMedBaseElement;
         new (): HTMLMedBaseElement;
     };
+    interface HTMLMedBase2Element extends Components.MedBase2, HTMLStencilElement {
+    }
+    var HTMLMedBase2Element: {
+        prototype: HTMLMedBase2Element;
+        new (): HTMLMedBase2Element;
+    };
     interface HTMLElementTagNameMap {
         "med-base": HTMLMedBaseElement;
+        "med-base-2": HTMLMedBase2Element;
     }
 }
 declare namespace LocalJSX {
@@ -32,8 +45,15 @@ declare namespace LocalJSX {
          */
         "color"?: Colors;
     }
+    interface MedBase2 {
+        /**
+          * Defines the component color.
+         */
+        "color"?: Colors;
+    }
     interface IntrinsicElements {
         "med-base": MedBase;
+        "med-base-2": MedBase2;
     }
 }
 export { LocalJSX as JSX };
@@ -41,6 +61,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "med-base": LocalJSX.MedBase & JSXBase.HTMLAttributes<HTMLMedBaseElement>;
+            "med-base-2": LocalJSX.MedBase2 & JSXBase.HTMLAttributes<HTMLMedBase2Element>;
         }
     }
 }

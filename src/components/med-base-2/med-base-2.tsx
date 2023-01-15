@@ -4,11 +4,11 @@ import { Colors } from '../../interface';
 import { namespace } from '../../global/constants/global.constant';
 
 @Component({
-  tag: 'med-base',
-  styleUrl: 'med-base.scss',
+  tag: 'med-base-2',
+  styleUrl: 'med-base-2.scss',
   shadow: true,
 })
-export class MedBase {
+export class MedBase2 {
   /**
    * Defines the component color.
    */
@@ -19,9 +19,7 @@ export class MedBase {
 
     return (
       <Host class={generateClasses(color, { [`${namespace}-base`]: true })}>
-        <med-base-2 color={color}>
-          <slot></slot>
-        </med-base-2>
+        <slot></slot>
       </Host>
     );
   }

@@ -8,13 +8,13 @@ export default {
 
 interface Config {
   scheme: string;
-  classes: string;
+  theme: string;
 }
 
 const Template = () => {
   setTimeout(() => {
     // variable declarations
-    let config: Config = { scheme: '', classes: '' };
+    let config: Config = { scheme: '', theme: '' };
 
     const deviceDefaultScheme = `${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'}`;
     const htmlEl = document.documentElement;
@@ -23,7 +23,7 @@ const Template = () => {
 
     // function calls
     config.scheme = 'dark'; // color system default scheme
-    config.classes = `${namespace}-theme-product-01`; // color system default theme
+    config.theme = `${namespace}-color-theme-product-01`; // color system default theme
     setTheme();
     render(setSnipet(config), snipetEl);
     toggleScheme(deviceDefaultScheme);
@@ -41,15 +41,15 @@ const Template = () => {
 
     // functions
     function setTheme() {
-      htmlEl.setAttribute('class', `hydrated ${config.classes}`);
+      htmlEl.setAttribute('class', `hydrated ${config.theme}`);
     }
 
     function toggleScheme(scheme) {
       const radioEl: HTMLInputElement = schemeRadioFormEl.querySelector(`#${scheme}`);
 
-      config.scheme = scheme;
+      config.scheme = `${namespace}-color-scheme-${scheme}`;
       radioEl.checked = true;
-      htmlEl.setAttribute(`data-${namespace}-color-scheme`, `${scheme}`);
+      htmlEl.setAttribute('class', `hydrated ${config.scheme} ${config.theme}`);
       render(setSnipet(config), snipetEl);
     }
 
@@ -57,7 +57,7 @@ const Template = () => {
       return html`
         <pre class="language-html">
 <code>
-<span class="snipet__tag">&lt;</span><span class="snipet__tag">html</span> <span class="snipet__attribute">class</span><span class="snipet__aux">="</span><span class="snipet__value">${config.classes}</span><span class="snipet__aux">"</span><span class="snipet__tag"> <span class="snipet__attribute">data-${namespace}-color-scheme</span><span class="snipet__aux">="</span><span class="snipet__value">${config.scheme}</span><span class="snipet__aux">"</span>&gt;&lt;/html&gt</span>
+<span class="snipet__tag">&lt;</span><span class="snipet__tag">html</span> <span class="snipet__attribute">class</span><span class="snipet__aux">="</span><span class="snipet__value">${config.scheme} ${config.theme}</span><span class="snipet__aux">"</span><span class="snipet__aux">&gt;&lt;/html&gt</span>
 </code>
 </pre>
       `;

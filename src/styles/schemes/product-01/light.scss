@@ -5,6 +5,20 @@
 //
 // css custom properties light
 //
-[#{$namespace}-color-scheme='light'],
-.#{$namespace}-color-scheme-light {
+.#{$namespace}-color-theme-product-01 {
+  &.#{$namespace}-color-scheme-light {
+    --background: var(--#{$namespace}-color-neutral-primary-80);
+    --color: var(--#{$namespace}-color-neutral-primary-980);
+
+    @include generate-main-custom-properties($color-main-hue-light, $color-main-saturation-light, $color-main-luminosity-light);
+    @include generate-neutral-custom-properties($color-neutral-hue-light, $color-neutral-saturation-light, $color-neutral-luminosity-light);
+    @include generate-feedback-custom-properties($color-feedback-hue-light, $color-feedback-saturation-light, $color-feedback-luminosity-light);
+
+    //
+    // css classes
+    //
+    @include generate-color-main-classes($color-main-hue-light, $color-main-saturation-light, $color-main-luminosity-light, $color-main-contrast-light);
+    @include generate-color-neutral-classes($color-neutral-hue-light, $color-neutral-saturation-light, $color-neutral-luminosity-light, $color-neutral-contrast-light);
+    @include generate-color-feedback-classes($color-feedback-hue-light, $color-feedback-saturation-light, $color-feedback-luminosity-light, $color-feedback-contrast-light);
+  }
 }

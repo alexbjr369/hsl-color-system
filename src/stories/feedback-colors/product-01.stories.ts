@@ -1,9 +1,9 @@
 import { html, render } from 'lit-html';
-import { ColorsNeutral } from '../../global/enums/color.enum';
+import { ColorsFeedback } from '../../global/enums/color.enum';
 import { namespace } from '../../global/constants/global.constant';
 
 export default {
-  title: 'Color System/Neutral Colors',
+  title: 'Color System/Feedback Colors',
 };
 
 interface Config {
@@ -82,7 +82,7 @@ const Template = () => {
         </li>
       </ul>
     </form>
-    ${Object.values(ColorsNeutral).map((color) => html`<med-base .color=${color}>${color}</med-base>`)}
+    ${Object.values(ColorsFeedback).map((color) => html`<med-base .color=${color}>${color}</med-base>`)}
   `;
 };
 

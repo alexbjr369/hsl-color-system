@@ -60,7 +60,8 @@
 //
 // css custom properties
 //
-@mixin generate-dark-scheme-main-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+// dark scheme
+@mixin generate-main-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $name: $key;
 
@@ -83,7 +84,7 @@
   }
 }
 
-@mixin generate-dark-scheme-neutral-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+@mixin generate-neutral-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $set: $key;
     $hue: $value;
@@ -102,7 +103,7 @@
   }
 }
 
-@mixin generate-dark-scheme-feedback-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+@mixin generate-feedback-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $name: $key;
 
@@ -124,6 +125,8 @@
     }
   }
 }
+
+// light scheme
 
 //
 // css classes

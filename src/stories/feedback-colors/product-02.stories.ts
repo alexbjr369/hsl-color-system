@@ -1,9 +1,9 @@
 import { html, render } from 'lit-html';
-import { ColorsNeutral } from '../../global/enums/color.enum';
+import { ColorsFeedback } from '../../global/enums/color.enum';
 import { namespace } from '../../global/constants/global.constant';
 
 export default {
-  title: 'Color System/Neutral Colors',
+  title: 'Color System/Feedback Colors',
 };
 
 interface Config {
@@ -23,7 +23,7 @@ const Template = () => {
 
     // function calls
     config.scheme = 'dark'; // color system default scheme
-    config.theme = `${namespace}-color-theme-product-01`; // color system default theme
+    config.theme = `${namespace}-color-theme-product-02`; // color system default theme
     setTheme();
     render(setSnipet(config), snipetEl);
     toggleScheme(deviceDefaultScheme);
@@ -82,8 +82,8 @@ const Template = () => {
         </li>
       </ul>
     </form>
-    ${Object.values(ColorsNeutral).map((color) => html`<med-base .color=${color}>${color}</med-base>`)}
+    ${Object.values(ColorsFeedback).map((color) => html`<med-base .color=${color}>${color}</med-base>`)}
   `;
 };
 
-export const Product01 = Template.bind({});
+export const Product02 = Template.bind({});

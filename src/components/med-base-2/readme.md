@@ -14,15 +14,15 @@
 
 ## Dependencies
 
-### Depends on
+### Used by
 
-- [med-base-2](../med-base-2)
+ - [med-base](../med-base)
 
 ### Graph
 ```mermaid
 graph TD;
   med-base --> med-base-2
-  style med-base fill:#f9f,stroke:#333,stroke-width:4px
+  style med-base-2 fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
