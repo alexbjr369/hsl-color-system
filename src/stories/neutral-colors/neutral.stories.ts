@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { ColorsNeutral } from '../global/enums/color.enum';
+import { ColorsNeutral } from '../../global/enums/color.enum';
 
 export default {
   title: 'Color System/Neutral Colors',

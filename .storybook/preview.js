@@ -7,8 +7,9 @@ import '../src/stories/color-system.stories.css';
 import '../styles/base.css';
 
 // schemes
+import '../styles/schemes/default.css';
+import '../styles/schemes/light.css';
 import '../styles/schemes/dark.css';
-// import '../styles/schemes/light.css';
 
 // themes
 import '../styles/themes/medsoft.css';

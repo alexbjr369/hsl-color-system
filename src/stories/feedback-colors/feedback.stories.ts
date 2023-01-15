@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { ColorsFeedback } from '../global/enums/color.enum';
+import { ColorsFeedback } from '../../global/enums/color.enum';
 
 export default {
   title: 'Color System/Feedback Colors',

@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { ColorsProduct01 } from '../global/enums/color.enum';
+import { ColorsProduct01 } from '../../global/enums/color.enum';
 
 export default {
   title: 'Color System/Main Colors',
