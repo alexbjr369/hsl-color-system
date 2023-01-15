@@ -4,15 +4,15 @@
 :host {
   display: block;
   padding: 8px 16px;
-  background: hsl(var(--med-color-primary-3));
-  color: hsl(var(--med-color-neutral-fixed));
+  background: var(--med-color-brand-primary-500);
+  color: var(--med-color-neutral-primary-980);
 }
 
 // //////////
 // color
 // //////////
 
-:host(.med-color) {
-  background: hsl(var(--med-color));
-  color: hsl(var(--med-color-contrast));
+:host(.#{$namespace}-color) {
+  background: var(--med-color);
+  color: var(--med-color-contrast);
 }

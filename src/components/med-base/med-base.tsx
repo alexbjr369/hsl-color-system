@@ -1,6 +1,6 @@
 import { Component, h, Host, Prop } from '@stencil/core';
-import { Color } from '../../interface';
 import { generateClasses } from '../../global/utilities/color';
+import { Colors } from '../../interface';
 
 @Component({
   tag: 'med-base',
@@ -11,7 +11,7 @@ export class MedBase {
   /**
    * Defines the component color.
    */
-  @Prop({ reflect: true }) color?: Color;
+  @Prop({ reflect: true }) color?: Colors;
 
   render() {
     const { color } = this;

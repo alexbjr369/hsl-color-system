@@ -1,8 +1,8 @@
 import { html, render } from 'lit-html';
-import { Colors } from '../global/enums/color.enum';
+import { ColorsBrand, ColorsProduct01 } from '../global/enums/color.enum';
 
 export default {
-  title: 'Base',
+  title: 'Color System',
 };
 
 interface Config {
@@ -132,14 +132,14 @@ const Template = ({ color }) => {
   `;
 };
 
-export const ColorSystem = Template.bind({});
-ColorSystem.argTypes = {
+export const Overview = Template.bind({});
+Overview.argTypes = {
   color: {
-    options: Object.values(Colors),
+    options: [...Object.values(ColorsBrand), ...Object.values(ColorsProduct01)],
     control: { type: 'select' },
     description: 'Defines the component color.',
     table: {
-      type: { summary: Object.values(Colors).join(' |') },
+      type: { summary: Object.values([ColorsBrand, ColorsProduct01]).join(' |') },
       defaultValue: { summary: 'undefined' },
     },
   },

@@ -6,13 +6,12 @@ import '../src/stories/color-system.stories.css';
 // color system
 import '../styles/base.css';
 
-// themes
-// import '../styles/themes/default.css';
-
 // schemes
-// import '../styles/schemes/default.css';
-// import '../styles/schemes/dark.css';
+import '../styles/schemes/dark.css';
 // import '../styles/schemes/light.css';
+
+// themes
+import '../styles/themes/medsoft.css';
 
 defineCustomElements();
 
@@ -22,6 +21,11 @@ export const parameters = {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
+    },
+  },
+  options: {
+    storySort: {
+      order: ['Main Colors', 'Neutral Colors', 'Feedback Colors'],
     },
   },
   themes: {

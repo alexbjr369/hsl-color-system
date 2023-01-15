@@ -5,13 +5,13 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Color } from "./interface";
+import { Colors } from "./interface";
 export namespace Components {
     interface MedBase {
         /**
           * Defines the component color.
          */
-        "color"?: Color;
+        "color"?: Colors;
     }
 }
 declare global {
@@ -30,7 +30,7 @@ declare namespace LocalJSX {
         /**
           * Defines the component color.
          */
-        "color"?: Color;
+        "color"?: Colors;
     }
     interface IntrinsicElements {
         "med-base": MedBase;

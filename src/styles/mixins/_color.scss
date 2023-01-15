@@ -1,23 +1,6 @@
-@use "sass:math";
-
-// @mixin generate-color-main($hue-map: null, $saturation-map: null, $luminosity-map: null) {
-//   @each $key, $value in $hue-map {
-//     $name: $key;
-
-//     @each $key-2, $value-2 in $value {
-//       $set: $key-2;
-//       $hue: $value-2;
-//       $saturation: map-get(map-get($saturation-map, $key), $key-2);
-//       //$luminosity: map-get(map-get($luminosity-map, $key), $key-2);
-//       $variation: map-get(map-get($luminosity-map, $key), $key-2);
-
-//       @each $key-3, $value-3 in $variation {
-//         --#{$namespace}-color-#{$name}-#{$set}-#{$key-3}: hsl(#{$hue}, #{$saturation}, #{$value-3});
-//       }
-//     }
-//   }
-// }
-
+//
+// color system
+//
 @mixin generate-color-main($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $name: $key;
@@ -25,33 +8,190 @@
     @each $key-2, $value-2 in $value {
       $set: $key-2;
       $hue: $value-2;
-      $saturation: map-get(map-get($saturation-map, $key), $key-2);
-      $variation: map-get(map-get($luminosity-map, $key), $key-2);
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
 
-      @each $key-3, $value-3 in $variation {
+      @each $key-3, $value-3 in $luminosity-variation {
         $luminosity: $value-3;
+        $variation: $key-3;
 
-        --#{$namespace}-color-#{$name}-#{$set}-#{$key-3}: hsl(#{$hue}, #{$saturation}, #{$luminosity});
+        --#{$namespace}-color-#{$name}-#{$set}-#{$variation}: hsl(var(--#{$namespace}-color-#{$name}-#{$set}-hue), var(--#{$namespace}-color-#{$name}-#{$set}-saturation), var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity));
       }
     }
   }
 }
 
-@mixin generate-color-neutral($hue-map: null, $saturation-map: null, $luminosity-map: null, $variations-map: null, $luminosity-multiplier: null) {
+@mixin generate-color-neutral($hue-map: null, $saturation-map: null, $luminosity-map: null) {
   @each $key, $value in $hue-map {
     $set: $key;
     $hue: $value;
-    $saturation: map-get($saturation-map, $key);
-    $luminosity: map-get($luminosity-map, $key);
-    $variation: map-get($variations-map, $key);
-    $luminosity-test: 0;
+    $saturation: map-get($saturation-map, $set);
+    $luminosity-variation: map-get($luminosity-map, $set);
 
-    @each $key-3 in $variation {
-      $variation-index: $key-3 * 100;
-      $luminosity-index: if($luminosity-multiplier != null, $luminosity + ($luminosity-test * ($key-3 - 1)), $key-3 * $luminosity);
-      $luminosity-test: $luminosity-multiplier;
+    @each $key-2, $value-2 in $luminosity-variation {
+      $luminosity: $value-2;
+      $variation: $key-2;
 
-      --#{$namespace}-color-neutral-#{$set}-#{$variation-index}: hsl(#{$hue}, #{$saturation}, #{$luminosity-index});
+      --#{$namespace}-color-neutral-#{$set}-#{$variation}: hsl(var(--#{$namespace}-color-neutral-#{$set}-hue), var(--#{$namespace}-color-neutral-#{$set}-saturation), var(--#{$namespace}-color-neutral-#{$set}-#{$variation}-luminosity));
+    }
+  }
+}
+
+@mixin generate-color-feedback($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+  @each $key, $value in $hue-map {
+    $name: $key;
+
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
+
+        --#{$namespace}-color-#{$name}-#{$set}-#{$variation}: hsl(var(--#{$namespace}-color-#{$name}-#{$set}-hue), var(--#{$namespace}-color-#{$name}-#{$set}-saturation), var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity));
+      }
+    }
+  }
+}
+
+//
+// custom-properties
+//
+@mixin generate-dark-scheme-main-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+  @each $key, $value in $hue-map {
+    $name: $key;
+
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+
+      --#{$namespace}-color-#{$name}-#{$set}-hue: #{$hue};
+      --#{$namespace}-color-#{$name}-#{$set}-saturation: #{$saturation};
+
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
+
+        --#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity: #{$luminosity};
+      }
+    }
+  }
+}
+
+@mixin generate-dark-scheme-neutral-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+  @each $key, $value in $hue-map {
+    $set: $key;
+    $hue: $value;
+    $saturation: map-get($saturation-map, $set);
+    $luminosity-variation: map-get($luminosity-map, $set);
+
+    --#{$namespace}-color-neutral-#{$set}-hue: #{$hue};
+    --#{$namespace}-color-neutral-#{$set}-saturation: #{$saturation};
+
+    @each $key-2, $value-2 in $luminosity-variation {
+      $luminosity: $value-2;
+      $variation: $key-2;
+
+      --#{$namespace}-color-neutral-#{$set}-#{$variation}-luminosity: #{$luminosity};
+    }
+  }
+}
+
+@mixin generate-dark-scheme-feedback-custom-properties($hue-map: null, $saturation-map: null, $luminosity-map: null) {
+  @each $key, $value in $hue-map {
+    $name: $key;
+
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+
+      --#{$namespace}-color-#{$name}-#{$set}-hue: #{$hue};
+      --#{$namespace}-color-#{$name}-#{$set}-saturation: #{$saturation};
+
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
+
+        --#{$namespace}-color-#{$name}-#{$set}-#{$variation}-luminosity: #{$luminosity};
+      }
+    }
+  }
+}
+
+//
+// classes
+//
+@mixin generate-color-main-classes($hue-map: null, $saturation-map: null, $luminosity-map: null, $contrast-map: null) {
+  @each $key, $value in $hue-map {
+    $name: $key;
+
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
+        $contrast: map-get(map-get(map-get($contrast-map, $name), $set), $variation);
+
+        .#{$namespace}-color_#{$name}-#{$set}-#{$variation} {
+          --#{$namespace}-color: var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}) !important;
+          --#{$namespace}-color-contrast: #{$contrast} !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-color-neutral-classes($hue-map: null, $saturation-map: null, $luminosity-map: null, $contrast-map: null) {
+  @each $key, $value in $hue-map {
+    $set: $key;
+    $hue: $value;
+    $saturation: map-get($saturation-map, $set);
+    $luminosity-variation: map-get($luminosity-map, $set);
+
+    @each $key-2, $value-2 in $luminosity-variation {
+      $luminosity: $value-2;
+      $variation: $key-2;
+      $contrast: map-get(map-get($contrast-map, $set), $variation);
+
+      .#{$namespace}-color_neutral-#{$set}-#{$variation} {
+        --#{$namespace}-color: var(--#{$namespace}-color-neutral-#{$set}-#{$variation}) !important;
+        --#{$namespace}-color-contrast: #{$contrast} !important;
+      }
+    }
+  }
+}
+
+@mixin generate-color-feedback-classes($hue-map: null, $saturation-map: null, $luminosity-map: null, $contrast-map: null) {
+  @each $key, $value in $hue-map {
+    $name: $key;
+
+    @each $key-2, $value-2 in $value {
+      $set: $key-2;
+      $hue: $value-2;
+      $saturation: map-get(map-get($saturation-map, $name), $set);
+      $luminosity-variation: map-get(map-get($luminosity-map, $name), $set);
+
+      @each $key-3, $value-3 in $luminosity-variation {
+        $luminosity: $value-3;
+        $variation: $key-3;
+        $contrast: map-get(map-get(map-get($contrast-map, $name), $set), $variation);
+
+        .#{$namespace}-color_#{$name}-#{$set}-#{$variation} {
+          --#{$namespace}-color: var(--#{$namespace}-color-#{$name}-#{$set}-#{$variation}) !important;
+          --#{$namespace}-color-contrast: #{$contrast} !important;
+        }
+      }
     }
   }
 }
