@@ -11,7 +11,7 @@ interface Config {
   theme: string;
 }
 
-const Template = () => {
+const Template = ({ color }) => {
   setTimeout(() => {
     // variable declarations
     let config: Config = { scheme: '', theme: '' };
@@ -82,8 +82,22 @@ const Template = () => {
         </li>
       </ul>
     </form>
+
+    <med-base .color=${color}>Dynamic: ${color}</med-base>
+
     ${Object.values(ColorsProduct01).map((color) => html`<med-base .color=${color}>${color}</med-base>`)}
   `;
 };
 
 export const Product01 = Template.bind({});
+Product01.argTypes = {
+  color: {
+    options: Object.values(ColorsProduct01),
+    control: { type: 'select' },
+    description: 'Defines the component color.',
+    table: {
+      type: { summary: Object.values(ColorsProduct01).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+};

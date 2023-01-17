@@ -38,3 +38,193 @@
   --med-color-caution-primary-650: hsl(var(--med-color-caution-primary-hue), var(--med-color-caution-primary-saturation), var(--med-color-caution-primary-650-luminosity));
   --med-color-warning-primary-650: hsl(var(--med-color-warning-primary-hue), var(--med-color-warning-primary-saturation), var(--med-color-warning-primary-650-luminosity));
 }
+
+.med-color_product-02-brand-200 {
+  --med-color: var(--med-color-product-02-brand-200) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-brand-300 {
+  --med-color: var(--med-color-product-02-brand-300) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-brand-500 {
+  --med-color: var(--med-color-product-02-brand-500) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-brand-700 {
+  --med-color: var(--med-color-product-02-brand-700) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_product-02-brand-800 {
+  --med-color: var(--med-color-product-02-brand-800) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_product-02-primary-200 {
+  --med-color: var(--med-color-product-02-primary-200) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-primary-300 {
+  --med-color: var(--med-color-product-02-primary-300) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-primary-500 {
+  --med-color: var(--med-color-product-02-primary-500) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-primary-700 {
+  --med-color: var(--med-color-product-02-primary-700) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_product-02-primary-800 {
+  --med-color: var(--med-color-product-02-primary-800) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_product-02-secondary-200 {
+  --med-color: var(--med-color-product-02-secondary-200) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-secondary-300 {
+  --med-color: var(--med-color-product-02-secondary-300) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-secondary-500 {
+  --med-color: var(--med-color-product-02-secondary-500) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_product-02-secondary-700 {
+  --med-color: var(--med-color-product-02-secondary-700) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_product-02-secondary-800 {
+  --med-color: var(--med-color-product-02-secondary-800) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-80 {
+  --med-color: var(--med-color-neutral-primary-80) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-130 {
+  --med-color: var(--med-color-neutral-primary-130) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-180 {
+  --med-color: var(--med-color-neutral-primary-180) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-230 {
+  --med-color: var(--med-color-neutral-primary-230) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-280 {
+  --med-color: var(--med-color-neutral-primary-280) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-330 {
+  --med-color: var(--med-color-neutral-primary-330) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-380 {
+  --med-color: var(--med-color-neutral-primary-380) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-430 {
+  --med-color: var(--med-color-neutral-primary-430) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-480 {
+  --med-color: var(--med-color-neutral-primary-480) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-980) !important;
+}
+
+.med-color_neutral-primary-530 {
+  --med-color: var(--med-color-neutral-primary-530) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-580 {
+  --med-color: var(--med-color-neutral-primary-580) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-630 {
+  --med-color: var(--med-color-neutral-primary-630) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-680 {
+  --med-color: var(--med-color-neutral-primary-680) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-730 {
+  --med-color: var(--med-color-neutral-primary-730) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-780 {
+  --med-color: var(--med-color-neutral-primary-780) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-830 {
+  --med-color: var(--med-color-neutral-primary-830) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-880 {
+  --med-color: var(--med-color-neutral-primary-880) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-930 {
+  --med-color: var(--med-color-neutral-primary-930) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_neutral-primary-980 {
+  --med-color: var(--med-color-neutral-primary-980) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_success-primary-650 {
+  --med-color: var(--med-color-success-primary-650) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_attention-primary-650 {
+  --med-color: var(--med-color-attention-primary-650) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_caution-primary-650 {
+  --med-color: var(--med-color-caution-primary-650) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}
+
+.med-color_warning-primary-650 {
+  --med-color: var(--med-color-warning-primary-650) !important;
+  --med-color-contrast: var(--med-color-neutral-primary-80) !important;
+}

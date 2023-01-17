@@ -10,3 +10,10 @@
   @include generate-color-neutral($color-neutral-hue-dark, $color-neutral-saturation-dark, $color-neutral-luminosity-dark);
   @include generate-color-feedback($color-feedback-hue-dark, $color-feedback-saturation-dark, $color-feedback-luminosity-dark);
 }
+
+//
+// css classes
+//
+@include generate-color-main-classes($color-main-hue-dark, $color-main-saturation-dark, $color-main-luminosity-dark, $color-main-contrast-dark);
+@include generate-color-neutral-classes($color-neutral-hue-dark, $color-neutral-saturation-dark, $color-neutral-luminosity-dark, $color-neutral-contrast-dark);
+@include generate-color-feedback-classes($color-feedback-hue-dark, $color-feedback-saturation-dark, $color-feedback-luminosity-dark, $color-feedback-contrast-dark);

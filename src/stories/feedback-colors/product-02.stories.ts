@@ -82,6 +82,7 @@ const Template = () => {
         </li>
       </ul>
     </form>
+
     ${Object.values(ColorsFeedback).map((color) => html`<med-base .color=${color}>${color}</med-base>`)}
   `;
 };
