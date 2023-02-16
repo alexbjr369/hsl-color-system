@@ -143,4 +143,22 @@ ColorSystem.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
+  colorSet: {
+    options: Object.values(Colors),
+    control: { type: 'select' },
+    description: 'Defines the component color.',
+    table: {
+      type: { summary: Object.values(Colors).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  colorVariation: {
+    options: Object.values(Colors),
+    control: { type: 'select' },
+    description: 'Defines the component color.',
+    table: {
+      type: { summary: Object.values(Colors).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
 };
