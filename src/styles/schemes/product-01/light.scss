@@ -1,0 +1,17 @@
+@import '../../variables';
+@import '../../variables/product-01/variables';
+@import '../../mixins';
+
+//
+// css custom properties light
+//
+.#{$namespace}-color-theme-product-01 {
+  &.#{$namespace}-color-scheme-light {
+    --background: var(--#{$namespace}-color-neutral-primary-80);
+    --color: var(--#{$namespace}-color-neutral-primary-980);
+
+    @include generate-main-custom-properties($color-main-hue-light, $color-main-saturation-light, $color-main-luminosity-light);
+    @include generate-neutral-custom-properties($color-neutral-hue-light, $color-neutral-saturation-light, $color-neutral-luminosity-light);
+    @include generate-feedback-custom-properties($color-feedback-hue-light, $color-feedback-saturation-light, $color-feedback-luminosity-light);
+  }
+}

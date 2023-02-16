@@ -1,3 +1,2 @@
-# Medgrupo Color System
+# HSL Color System
 
-- By default medgrupo's color scheme is dark.

@@ -1,0 +1,17 @@
+@import '../../variables';
+@import '../../variables/product-02/variables';
+@import '../../mixins';
+
+//
+// css custom properties default
+//
+.#{$namespace}-color-theme-product-02 {
+  &.#{$namespace}-color-scheme-dark {
+    --background: var(--#{$namespace}-color-neutral-primary-80);
+    --color: var(--#{$namespace}-color-neutral-primary-980);
+
+    @include generate-main-custom-properties($color-main-hue-dark, $color-main-saturation-dark, $color-main-luminosity-dark);
+    @include generate-neutral-custom-properties($color-neutral-hue-dark, $color-neutral-saturation-dark, $color-neutral-luminosity-dark);
+    @include generate-feedback-custom-properties($color-feedback-hue-dark, $color-feedback-saturation-dark, $color-feedback-luminosity-dark);
+  }
+}
